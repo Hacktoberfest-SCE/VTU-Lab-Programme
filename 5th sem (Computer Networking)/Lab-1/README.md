@@ -16,14 +16,13 @@ gedit filename.tcl
 
 ns filename.tcl
 
-
 awk file (only for program - 1,2,4)
 
 gedit filename.awk
 
 awk –f filename.awk filename.tr
 
-
+___________________________________________________________________________________________________________
 
 awk execution for only 3 rd ( Ethernet lan) program
 
@@ -37,7 +36,6 @@ tr file(tracing file)(all)
 gedit filename.tr
 
 
-
 5 th and 6 th program
 
 Set path using (cd)use ls to find path
@@ -49,3 +47,8 @@ save the program in path above and run in same path by using cd command
 _________________________________________________________________________________________________________________________
 ## OUTPUT:
 ![Screenshot (458)](https://user-images.githubusercontent.com/55579860/135726857-68f8db15-1cfb-40da-8b6e-b21a8f0c6c45.png)
+
+
+
+
+Note : Use correct file names while executing the program.
