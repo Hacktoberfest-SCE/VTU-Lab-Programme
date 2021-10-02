@@ -1,5 +1,5 @@
 # CN-lab
-Cn lab programs
+Cn lab program - 1
 
 # Important links
 
@@ -10,14 +10,14 @@ http://sourceforge.net/projects/nsnam/files/allinone/ns-allinone-2.35/ns-allinon
 
 ## Execution steps
 
-PART A same for (1-6)
+PART A programs execution process
 
 gedit filename.tcl
 
 ns filename.tcl
 
 
-awk file(1,2,4)
+awk file (only for program - 1,2,4)
 
 gedit filename.awk
 
@@ -46,14 +46,6 @@ ns-allinone-2.35/ns-2.35/tcl/ex/wireless-script/-
 
 save the program in path above and run in same path by using cd command
 
-part B (1to6)
-
-creating----gedit filename.java
-
-compile-----javac filename.java
-
-output------java filename
-
-tcp/ip(3&amp;4)
-
-open 2 terminals first run server
+_________________________________________________________________________________________________________________________
+## OUTPUT:
+![Screenshot (458)](https://user-images.githubusercontent.com/55579860/135726857-68f8db15-1cfb-40da-8b6e-b21a8f0c6c45.png)
