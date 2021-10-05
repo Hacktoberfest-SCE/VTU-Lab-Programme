@@ -1,0 +1,56 @@
+import java.util.Random;
+public class Square_extends_thread {
+class MyThread2 extends Thread {
+public void run() {
+System.out.println("Square
+
+of"+Square_extends_thread.randominteger+"is"+Square_extends_thread.randominteger*Squa
+re_extends_thread.randominteger);
+
+}
+}
+static int randominteger;
+public static void main(String[] args) {
+System.out.println("For 10 Random numbers");
+MyThread1 thread1 = new MyThread1();
+thread1.start();
+}
+}
+class MyThread1 extends Thread{
+public void run() {
+try {
+for(int i=0;i<10;i++) {
+Random random = new Random();
+Square_extends_thread.randominteger = random.nextInt(30);
+System.out.println(i+ " Random integer is"
+
++Square_extends_thread.randominteger);
+
+new MyThread2().start();//start thread 2
+new MyThread3().start();//start thread 3
+Thread.sleep(1000*1);
+System.out.println("\n\n");
+}
+}
+catch (InterruptedException exception)
+{
+exception.printStackTrace();
+}
+}
+}
+class MyThread2 extends Thread {
+public void run() {
+System.out.println("Square
+
+of"+Square_extends_thread.randominteger+"is"+Square_extends_thread.randominteger*Squa
+re_extends_thread.randominteger);
+}
+}
+class MyThread3 extends Thread {
+
+public void run() {
+System.out.println("Cube
+
+of"+Square_extends_thread.randominteger+"is"+Square_extends_thread.randominteger*Squa
+re_extends_thread.randominteger*Square_extends_thread.randominteger);
+}}
