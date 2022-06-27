@@ -1,3 +1,2 @@
-# VTU-Lab-Programme
-
-## Vtu all sem lab programme.
+# VTU lab program varsh
+ Hactoberfest repo
