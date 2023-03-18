@@ -1,0 +1,36 @@
+locks=int(input("Enter the total number of locks:"))
+flag=0
+if ((locks<=0) or (locks>70)):
+    flag=1
+    
+stocks=int(input("Enter the total number of stocks:"))  
+
+if ((stocks<=0) or (stocks>80)):
+    flag=1
+    print("Stocks out of range")
+    
+barrels=int(input("Enter the number of barrels:"))
+    
+if ((barrels<=0) or (barrels>90)):
+    flag=1
+    
+if flag==1:
+    print("Invalid input")
+    
+sales=locks*45+stocks*30+barrels*25
+
+if sales<=1000:
+    commission=0.10*sales
+    
+elif sales<=1800:
+    commission=0.10*1000
+    commission=commission+(0.15*(sales-1000))
+else:
+    commission=0.10*1000
+    commission=commission+(0.15*800)
+    commission=commission+(0.20*(sales-1800))
+    
+print("Total sales:{}".format(sales))
+print("Total commission:{}".format(commission))
+
+
