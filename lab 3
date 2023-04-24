@@ -1,0 +1,110 @@
+#include&lt;stdio.h&gt;
+int main()
+{
+intdd,mm,yy,flag=0;
+Printf(&quot;Enter the date,month and year\n&quot;);
+scanf(&quot;%d%d%d&quot;,&amp;dd,&amp;mm,&amp;yy);
+if(dd&lt;=0||dd&gt;31)
+{
+printf(&quot;Day out of range\n&quot;);
+flag=1;
+}
+if(mm&lt;=0||mm&gt;12)
+{
+printf(&quot;Month out of range\n&quot;);
+flag=1;
+}
+if(yy&lt;=1812||yy&gt;2012)
+{
+printf(&quot;Year out of range\n&quot;);
+flag=1;
+}
+if(flag==0)
+{
+if(mm==1||mm==3||mm==5||mm==7||mm==8||mm==10)
+{
+if(dd&lt;31)
+dd=dd+1;
+else
+{
+
+Software Testing Laboratory 18ISL66
+
+Dept of ISE, SCEPage 12
+
+dd=1;
+mm=mm+1;
+}
+}
+else if(mm==4||mm==6||mm==9||mm==11)
+{
+if(dd&lt;30)
+dd=dd+1;
+else if(dd==31)
+{
+printf(&quot;Date 31 does not exist in this month\n&quot;);
+return 0;
+}
+else
+{
+dd=1;
+mm=mm+1 ;
+}
+}
+else if(mm==12)
+{
+if(dd&lt;31)
+dd=dd+1;
+else
+{
+dd=1;
+mm=1;
+yy=yy+1;
+}
+}
+else
+{
+if((yy%4==0 &amp;&amp; yy%100!=0) || (yy%400==0))
+{
+if(dd&lt;29)
+dd=dd+1;
+else if(dd&gt;29)
+{
+printf(&quot;Date %d does not exist in this month\n&quot;,dd);
+return 0;
+}
+
+Software Testing Laboratory 18ISL66
+
+Dept of ISE, SCEPage 13
+
+else
+{
+dd=1;
+mm=3;
+}
+}
+else
+{
+if(dd&lt;28)
+dd=dd+1;
+else if(dd&gt;28)
+{
+
+printf(&quot;Date %d does not exist in this month\n&quot;,dd);
+return 0;
+}
+else
+{
+dd=1;
+mm=3;
+}
+}
+}
+printf(&quot;Next date:%d-%d-%d\n&quot;,dd,mm,yy);
+return 0;
+}
+else
+return 0;
+
+}

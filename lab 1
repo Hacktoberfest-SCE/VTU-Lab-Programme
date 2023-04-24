@@ -1,0 +1,39 @@
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+int main()
+{
+inta,b,c;
+printf(&quot;Enter the sides of the triangle:\n&quot;);
+scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c);
+if((a&lt;1 || a&gt;10)&amp;&amp;(b&lt;1 || b&gt;10)&amp;&amp;(c&lt;1 || c&gt;10))
+printf(&quot;Sides a,b and c are of out of range&quot;);
+else if((a&lt;1 || a&gt;10)&amp;&amp;(b&lt;1 || b&gt;10))
+printf(&quot;Sides a and b are out of range&quot;);
+else if((b&lt;1 || b&gt;10)&amp;&amp;(c&lt;1 || c&gt;10))
+printf(&quot;Sides b and c are out of range&quot;);
+else if((a&lt;1 || a&gt;10)&amp;&amp;(c&lt;1 || c&gt;10))
+printf(&quot;Sides a and c are out of range&quot;);
+else if(a&lt;1 || a&gt;10)
+printf(&quot;side a is out of range.&quot;);
+else if(b&lt;1 || b&gt;10)
+printf(&quot;side b is out of range.&quot;);
+else if(c&lt;1 || c&gt;10)
+printf(&quot;side c is out of range.&quot;);
+else
+{
+if((a&lt;b+c)&amp;&amp;(b&lt;a+c)&amp;&amp;(c&lt;a+b))
+{
+printf(&quot;Triangle is formed..\n&quot;);
+if(a==b &amp;&amp; b==c &amp;&amp; c==a )
+printf(&quot;Equilateral triangle..\n&quot;);
+else if(a==b || b==c || c==a)
+printf(&quot;Isoceles triangle..\n&quot;);
+else
+printf(&quot;Scalene triangle...\n&quot;);
+}
+else
+{
+printf(&quot;not a triangle..\n&quot;);
+}
+}
+return 0;}

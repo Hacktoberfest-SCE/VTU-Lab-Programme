@@ -1,0 +1,50 @@
+#include&lt;stdio.h&gt;
+int main()
+{
+intlocks,stocks,barrels,sales,flag=0;
+float commission;
+printf(&quot;Enter the total number of locks\n&quot;);
+scanf(&quot;%d&quot;,&amp;locks);
+printf(&quot;Enter the total number of stocks\n&quot;);
+scanf(&quot;%d&quot;,&amp;stocks);
+printf(&quot;Enter the total number of barrels\n&quot;);
+scanf(&quot;%d&quot;,&amp;barrels);
+if((locks&lt;=0) || (locks&gt;70))
+{
+flag=1;
+printf(&quot;Locks Out of Range\n&quot;);
+}
+if((stocks&lt;=0) || (stocks&gt;80))
+{
+flag=1;
+printf(&quot;Stocks Out of Range\n&quot;);
+}
+if((barrels&lt;=0) || (barrels&gt;90))
+{
+flag=1;
+printf(&quot;Barrels Out of Range\n&quot;);
+}
+if(flag == 1)
+{
+printf(&quot;Invalid input\n&quot;);
+return 0;
+}
+sales= locks*45 + stocks*30 + barrels*25;
+if(sales &lt;= 1000)
+{
+commission = 0.10 * sales;
+}
+else if(sales &lt;= 1800)
+{
+commission = 0.10 * 1000;
+commission = commission + (0.15 * (sales - 1000));
+}
+else
+{
+commission = 0.10 * 1000;
+commission = commission + (0.15 * 800);
+commission = commission + (0.20 * (sales - 1800));
+}
+printf(&quot;Total sales: %d and Commission: %f\n&quot;,sales,commission);
+return 0;
+}
